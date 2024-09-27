@@ -28,7 +28,6 @@ public class kafe13 {
             case "coklat":
                 hargaMenu = 120000;
                 break;
-        
             default:
                 break;
         }
@@ -36,30 +35,17 @@ public class kafe13 {
         switch (ukuranCup) {
             case 'S':
                 break;
-            
             case 'M':
                 totalHarga += 0.25 * totalHarga;
-                break;
-            
+                break;   
             case 'L':
                 totalHarga += 0.4 * totalHarga;
                 break;
         }
-
         double diskon = keanggotaan ? 0.1 : 0;
         double nominalBayar = totalHarga - (diskon * totalHarga); 
-
-
         System.out.println("item pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranCup);
         System.out.println("nominal bayar: " + nominalBayar);
-
-
-
         sc.close();
-
-
-
-
-
     }
 }

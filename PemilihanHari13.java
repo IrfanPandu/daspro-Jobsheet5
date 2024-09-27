@@ -2,35 +2,26 @@ import java.util.Scanner;
 public class PemilihanHari13 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
-        String dayName, dayType;
-
+        String  dayType;
+        int dayName;
         System.out.print("Input day name: ");
-        dayName = sc.nextLine();
-
-        switch (dayName.toLowerCase()) {
-            case "monday":
-            case "tuesday":
-            case "wednesday":
-            case "thursday":
-            case "friday":
+        dayName = sc.nextInt();
+        switch (dayName) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
                 dayType = "weekdays";
                 break;
-            case "saturday":
-            case "sunday":
+            case 6:
+            case 7:
                 dayType = "weekend";
             default:
                 dayType = "invalid lek";
         }
         System.out.println(dayName + " is a " + dayType);
-        
         sc.close();
-
-
-
-
-
-
     }
 
 }
